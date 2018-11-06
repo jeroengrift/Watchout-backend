@@ -26,18 +26,19 @@ public class FilmController {
         return service.read(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/", method = RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
     public Film add(@RequestBody Film film) {
-        int id = service.create(film);
-        film.setId(id);
-        return film;
+        return service.create(film);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     public Film update(@RequestBody Film film) {
         return service.update(film);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
     public boolean delete(@PathVariable(name="id") int id) {
         service.delete(id);

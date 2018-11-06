@@ -17,10 +17,8 @@ public class FilmService {
         this.repository = repository;
     }
 
-    public int create(Film film) {
-        Film created = repository.save(film);
-
-        return created.getId();
+    public Film create(Film film) {
+        return repository.save(film);
     }
 
     public List<Film> all() {
@@ -44,6 +42,9 @@ public class FilmService {
         if (oldItem.isPresent()) {
             if (film.getName() != null) {
                 oldItem.get().setName(film.getName());
+                oldItem.get().setDescription(film.getDescription());
+                oldItem.get().setYoutubeId(film.getYoutubeId());
+                oldItem.get().setRating(film.getRating());
             }
             return repository.save(oldItem.get());
         }

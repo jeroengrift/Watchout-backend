@@ -1,20 +1,17 @@
 package com.capgemini.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Film {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private int id;
     private String name;
     private String description;
     private String youtubeId;
-    private double rating;
+    private int rating;
 
     public int getId() {
         return id;
@@ -48,11 +45,11 @@ public class Film {
         this.youtubeId = youtubeId;
     }
 
-    public double getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 }
