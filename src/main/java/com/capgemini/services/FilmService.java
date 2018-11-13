@@ -45,6 +45,9 @@ public class FilmService {
                 oldItem.get().setDescription(film.getDescription());
                 oldItem.get().setYoutubeId(film.getYoutubeId());
                 oldItem.get().setRating(film.getRating());
+                oldItem.get().setLon(film.getLon());
+                oldItem.get().setLat(film.getLat());
+
             }
             return repository.save(oldItem.get());
         }

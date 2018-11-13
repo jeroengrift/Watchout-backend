@@ -12,6 +12,24 @@ public class Film {
     private String description;
     private String youtubeId;
     private int rating;
+    private double lon;
+    private double lat;
+
+    public double getLon() {
+        return lon;
+    }
+
+    public void setLon(double lon) {
+        this.lon = lon;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double late) {
+        this.lat = late;
+    }
 
     public int getId() {
         return id;

@@ -11,6 +11,7 @@ import java.util.List;
 @RestController("film_api_controller")
 @RequestMapping("/api/film")
 public class FilmController {
+
     @Autowired
     private FilmService service;
 
@@ -19,6 +20,7 @@ public class FilmController {
     public List<Film> get() {
         return service.all();
     }
+
 
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces= MediaType.APPLICATION_JSON_VALUE)
