@@ -1,1 +1,7 @@
-com\capgemini\web\RegisterController.class
+com\capgemini\domain\Film.class
+com\capgemini\web\SecurityConfig.class
+com\capgemini\controller\FilmController.class
+com\capgemini\data\FilmRepository.class
+com\capgemini\services\FilmService.class
+com\capgemini\web\MyBasicAuthenticationEntryPoint.class
+com\capgemini\FilmApplication.class
